@@ -20,8 +20,6 @@ export function DoughnutChart() {
       setInfo(getInfo);
     });
 
-  
-
   const data = {
     labels: info.map((l) => l.name).slice(0, 3), //labels must be a text value
     datasets: [
@@ -31,9 +29,9 @@ export function DoughnutChart() {
         //data: myarr(),
         data: info.map((l) => l.swap).slice(0, 3),
         backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(50, 211, 158, 0.8)",
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(50, 211, 158, 1)",
         ],
         borderColor: [
           "rgba(153, 102, 255, 1)",
