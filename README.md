@@ -12,6 +12,7 @@ Supported browsers include Chrome, Firefox and Brave.
 
 ### User Interface
 Once you are in the WebDashbaord, You will see a field to "Enter your wallet address" and select the network to track your assets. Enter your wallet address, select preferred network from the dropdown list and click on the search icon at the top right hand side of the User Interface.
+https://raw.githubusercontent.com/casweeney/Covalent-Hackathon/master/public/images/dashboard1.png
 
  
 
@@ -19,18 +20,16 @@ The "Assets" section of the dashboard will load right away after selecting the a
 
 
 #### Key Features
-“Assets” section display the assets you own based the network you have selected. <br>
-“DAO” section only holds transaction analytics <br>
-"NFT" section contains 
+<b>Assets section:</b> Displays the assets you own based the wallet address and selected network. <br>
+<b>DAO section:</b>  Displays data from different DAOs used for analysis.<br>
+<b>NFT section: (Coming Soon)</b> Displays all the NFTs and address holds.
 
 
 ### Supported Networks
-Ethereum
-![Ethereum](https://logo-download.com/wp-content/data/images/png/Ethereum-logo.png)
-Binance Smart Chain
-![Binance Smart Chain](https://logowik.com/content/uploads/images/t_binance-coin-bnb5057.jpg)
-Polygon
-![Polygon](https://thumbs.dreamstime.com/b/polygon-logos-vector-logo-text-icon-author-s-development-image-large-size-original-red-230651964.jpg)
+1. Ethereum
+2. Binance Smart Chain
+3. Polygon
+
 
 # Development Environment
 
@@ -38,10 +37,15 @@ Polygon
 Vercel link []
 
 ### Steps to Deploy
+1. Clone this repository
+2. Run `npm install` to install all dependencies
+3. Start a terminal on the project folder
+4. Run `npm start` to ensure everything is working well
+5. Deploy on (Netlify or Vercel or Fleek)
 ### Deployments
 
 ### Contributors
-Cas <br>
-Jesserc <br>
-Longs <br>
+Casweeney Ojukwu: https://github.com/casweeney <br>
+Jesse Raymond: https://github.com/Jesserc <br>
+Longs Penum: https://github.com/devlongs <br>
 Mitchelle 
