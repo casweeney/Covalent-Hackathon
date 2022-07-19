@@ -26,7 +26,7 @@ const Dao = () => {
 
           <div className="flex-1">
               <div className="bg-indigo-200 m-7 p-6">
-                  <div className="text-4xl text-gray-800 font-medium">
+                  <div className="text-5xl text-bold text-gray-800 font-medium">
                     Track DeFi and DAO Portfolios
                   </div>
                   <div className="mt-4">View all your DeFi investments and DAO analytics in a single dashboard!</div>
