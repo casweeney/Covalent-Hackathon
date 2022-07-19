@@ -13,14 +13,19 @@ const TopNav = (props) => {
         setChainId(e.target.value);
     }
 
-    const fetchAssestsHandler = async (e) => {
-        e.preventDefault();
+    const fetchDataHandler = (e) => {
+        e.preventDefault()
 
-        if(address === '' || chainId === '') {
+        if(address === '' || chainId === ''){
             alert('Address and Network needed');
             return;
         }
 
+        fetchAssestsHandler();
+        fetchTransactionHandler();
+    }
+
+    const fetchAssestsHandler = async () => {
         props.onLoading(true);
 
         const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?&key=ckey_c9ceec82b70743a0b334b50ec49`);
@@ -31,10 +36,17 @@ const TopNav = (props) => {
         props.onFetchedToken(data.data.items);
     }
 
+    const fetchTransactionHandler = async () => {
+        const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/transactions_v2/?&key=ckey_c9ceec82b70743a0b334b50ec49`);
+        const data = await response.json();
+
+        props.onFetchTransaction(data.data.items);
+    }
+
     return (
         <div>
             <div className="bg-gray-900 px-2 py-0.5 h-18 flex">
-                <form className='w-full' onSubmit={fetchAssestsHandler}>
+                <form className='w-full' onSubmit={fetchDataHandler}>
                     <div className="md:w-full sm:w-full flex p-3 items-center space-x-2">
                         <input onChange={addressChangeHandler} value={address} type="text" className="w-full py-2 px-2 border border-gray-400 rounded" placeholder="Enter wallet address" />
                         <select onChange={chainChangeHandler} className="py-2 px-2 rounded">

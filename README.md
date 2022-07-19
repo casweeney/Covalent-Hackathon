@@ -1,70 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web3Dashboard 
+Web3Dashboard is a Defi and DAO platform that enables users to keep track of all the details of their DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart.
 
-## Available Scripts
+# Getting Started with Web3Dashboard
+### Web Requirements
 
-In the project directory, you can run:
+## To check your assets you will need the following
+Wallet Address.<br>
+All Operating systems are supported (Windows, Mac, Linux).<br>
+Supported browsers include Chrome, Firefox and Brave.
 
-### `npm start`
+### User Interface
+Once you are in the WebDashbaord, You will see a field to "Enter your wallet address" and select the network to track your assets. Enter your wallet address, select preferred network from the dropdown list and click on the search icon at the top right hand side of the User Interface.
+![Dashboard](https://raw.githubusercontent.com/casweeney/Covalent-Hackathon/master/public/images/dashboard1.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The "Assets" section of the dashboard will load right away after selecting the appropriate button on the dashboard's left side. You can then toggle to the "DAO" section, the NFT session, and back.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Key Features
+<b>Assets section:</b> Displays the assets you own based the wallet address and selected network. <br>
+<b>DAO section:</b>  Displays data from different DAOs used for analysis.<br>
+<b>NFT section: (Coming Soon)</b> Displays all the NFTs and address holds.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Supported Networks
+1. Ethereum
+2. Binance Smart Chain
+3. Polygon
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Development Environment
 
-### `npm run eject`
+## User Interface Link
+Vercel link []
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps to Deploy
+1. Clone this repository
+2. Run `npm install` to install all dependencies
+3. Start a terminal on the project folder
+4. Run `npm start` to ensure everything is working well
+5. Deploy on (Netlify or Vercel or Fleek)
+### Deployments
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contributors
+Casweeney Ojukwu: https://github.com/casweeney <br>
+Jesse Raymond: https://github.com/Jesserc <br>
+Longs Penum: https://github.com/devlongs <br>
+Mitchelle 
