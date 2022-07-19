@@ -12,7 +12,7 @@ Supported browsers include Chrome, Firefox and Brave.
 
 ### User Interface
 Once you are in the WebDashbaord, You will see a field to "Enter your wallet address" and select the network to track your assets. Enter your wallet address, select preferred network from the dropdown list and click on the search icon at the top right hand side of the User Interface.
-https://raw.githubusercontent.com/casweeney/Covalent-Hackathon/master/public/images/dashboard1.png
+![Dashboard](https://raw.githubusercontent.com/casweeney/Covalent-Hackathon/master/public/images/dashboard1.png)
 
  
 
