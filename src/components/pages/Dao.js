@@ -9,7 +9,7 @@ import { PolarChart } from "../charts/Polar";
 
 const Dao = () => {
   const [uniswapToken, setUniswapTokens] = useState([]);
-  const [tokenIndex, setTokenIndex] = useState([]);
+  // const [tokenIndex, setTokenIndex] = useState([]);
 
   const getUniswapTokens = async () => {
     const response = await fetch(
@@ -21,18 +21,8 @@ const Dao = () => {
 
   useEffect(() => {
     getUniswapTokens();
-    tokenForNetwork();
+    // tokenForNetwork();
   }, []);
-  const tokenForNetwork = async () => {
-    const response = await fetch(
-      "https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/?quote-currency=USD&format=JSON&page-size=10&page-number=&key=ckey_c9ceec82b70743a0b334b50ec49"
-    );
-
-    const data = await response.json();
-    const dataItems = data.data.items;
-    setTokenIndex(dataItems);
-    return dataItems;
-  };
   return (
     <div className="flex">
       <SideNav />
@@ -59,7 +49,7 @@ const Dao = () => {
             <span className="bg-green-500 text-white p-1 rounded-full text-sm font-bold align-text-top">
               +58%
             </span>
-            <DoughnutChart tokenIndex={tokenIndex} />
+            <DoughnutChart /* tokenIndex={tokenIndex} */ />
           </div>
 
           <div className="w-1/2 bg-white p-4">

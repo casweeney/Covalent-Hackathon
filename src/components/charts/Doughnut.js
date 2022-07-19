@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
@@ -9,7 +8,7 @@ export const data = {
   datasets: [
     {
       label: "# of Votes",
-      data: [12, 19, 3, 5, 2, 3],
+      data: [],
       backgroundColor: [
         "rgba(255, 99, 132, 0.2)",
         "rgba(54, 162, 235, 0.2)",
@@ -31,7 +30,31 @@ export const data = {
   ],
 };
 
+const tokenForNetwork = async () => {
+  const response = await fetch(
+    "https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/?quote-currency=USD&format=JSON&page-size=10&page-number=&key=ckey_c9ceec82b70743a0b334b50ec49"
+  );
+
+  const data = await response.json();
+  const dataItems = data.data.items;
+  console.log(dataItems);
+
+  const chainNames = data.data.items.for((name) => {
+    return name.contract_ticker_symbol;
+  });
+  console.log(chainNames);
+
+  const swapCount = data.data.items.for((swap) => {
+    return swap.swap_count_24h;
+  });
+  console.log(swapCount);
+};
+
 export function DoughnutChart(props) {
+  useEffect(() => {
+    // getUniswapTokens();
+    tokenForNetwork();
+  }, []);
   console.log(props);
   return <Doughnut data={data} />;
 }
