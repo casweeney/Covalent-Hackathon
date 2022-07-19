@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = () => {
     return (
@@ -19,7 +19,7 @@ const SideNav = () => {
                         <img className="h-5 w-5" src="images/campaign.png" alt="" />
                     </div>
                     <div className="mx-3 text-sm text-gray-100">
-                        <Link to="/">Assets</Link>
+                        <NavLink activeClassName="nav-active" to="/">Assets</NavLink>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@ const SideNav = () => {
                         <img className="h-5 w-5" src="images/dashboard.png" alt="" />
                     </div>
                     <div className="mx-3 text-sm text-gray-100">
-                        <Link to="/dao">DAO</Link>
+                        <NavLink activeClassName="nav-active" to="/dao">DAO</NavLink>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@ const SideNav = () => {
                         <img className="h-5 w-5" src="images/orders.png" alt="" />
                     </div>
                     <div className="mx-3 text-sm text-gray-100">
-                        <Link to="/nft">NFT</Link>
+                        <NavLink activeClassName="nav-active" to="/nft">NFT</NavLink>
                     </div>
                 </div>
             </div>

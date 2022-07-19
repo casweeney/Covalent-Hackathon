@@ -10,7 +10,7 @@ function App() {
                 <Defi />
             </Route>
 
-            <Route path='/dao'>
+            <Route path='/dao' exact>
                 <Dao />
             </Route>
         </Switch>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import SideNav from '../SideNav';
-import TopNav from '../TopNav';
 import Organizations from '../Organizations';
 import { DoughnutChart } from '../charts/Doughnut';
 import { PieChart } from '../charts/Pie';
@@ -26,8 +25,6 @@ const Dao = () => {
           <SideNav />
 
           <div className="flex-1">
-              <TopNav />
-
               <div className="bg-indigo-200 m-7 p-6">
                   <div className="text-4xl text-gray-800 font-medium">
                     Track DeFi and DAO Portfolios
