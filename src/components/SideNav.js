@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { Link } from 'react-router-dom';
 
 const SideNav = () => {
     return (
@@ -15,23 +16,29 @@ const SideNav = () => {
 
                 <div className="flex m-5 mt-2 items-center">
                     <div>
-                        <img className="h-5 w-5" src="images/dashboard.png" alt="" />
+                        <img className="h-5 w-5" src="images/campaign.png" alt="" />
                     </div>
-                    <div className="mx-3 text-sm text-gray-100">DAO</div>
+                    <div className="mx-3 text-sm text-gray-100">
+                        <Link to="/">Assets</Link>
+                    </div>
                 </div>
 
                 <div className="flex m-5 mt-2 items-center">
                     <div>
-                        <img className="h-5 w-5" src="images/campaign.png" alt="" />
+                        <img className="h-5 w-5" src="images/dashboard.png" alt="" />
                     </div>
-                    <div className="mx-3 text-sm text-gray-100">Assets</div>
+                    <div className="mx-3 text-sm text-gray-100">
+                        <Link to="/dao">DAO</Link>
+                    </div>
                 </div>
 
                 <div className="flex m-5 mt-2 items-center">
                     <div>
                         <img className="h-5 w-5" src="images/orders.png" alt="" />
                     </div>
-                    <div className="mx-3 text-sm text-gray-100">NFT</div>
+                    <div className="mx-3 text-sm text-gray-100">
+                        <Link to="/nft">NFT</Link>
+                    </div>
                 </div>
             </div>
             {/* Side Navbar */}
