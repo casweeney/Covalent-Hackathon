@@ -65,7 +65,7 @@ const SideNav = () => {
           </div>
         </div>
 
-        <div className="flex m-5 mt-2 items-center">
+        {/* <div className="flex m-5 mt-2 items-center">
           <div>
             <img className="h-5 w-5" src="images/orders.png" alt="" />
           </div>
@@ -78,7 +78,7 @@ const SideNav = () => {
               NFT
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* Side Navbar */}
     </Fragment>

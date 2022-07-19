@@ -48,4 +48,4 @@ Vercel link []
 Casweeney Ojukwu: https://github.com/casweeney <br>
 Jesse Raymond: https://github.com/Jesserc <br>
 Longs Penum: https://github.com/devlongs <br>
-Mitchelle 
+Mitchell Osawaru: https://github.com/Cyber-Mitch
