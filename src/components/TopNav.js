@@ -54,6 +54,8 @@ const TopNav = (props) => {
                             <option value="1">ETH</option>
                             <option value="56">BSC</option>
                             <option value="137">Polygon</option>
+                            <option value="250">Fantom</option>
+                            <option value="43114">Avalanche</option>
                         </select>
                         <button type="submit">
                             <img src="images/search.png" className="w-10 h-10 bg-gray-100 mx-2 rounded-full p-1" alt="" />

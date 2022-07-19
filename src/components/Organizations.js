@@ -1,8 +1,8 @@
 import Token from './Token';
 
 const Organizations = (props) => {
-    
-    // console.log(props.tokens);
+
+    console.log(props.tokens);
 
     return (
         <div className="flex m-7 space-x-6">
