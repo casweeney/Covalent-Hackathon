@@ -37,7 +37,7 @@ const Dao = () => {
         <div className="flex m-7 space-x-6">
           <div className="w-1/2 bg-white p-4">
             <div className="font-bold text-xl text-gray-700">
-              Top 3 Tokens On Uniswap Based On Swap Count(24hrs)
+              Top 5 Tokens On Uniswap Based On Swap Count(24hrs)
             </div>
             <DoughnutChart />
           </div>
