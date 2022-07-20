@@ -30,12 +30,16 @@ const Organizations = (props) => {
             <select onChange={networkChangeHandler}>
                 <option value="1">Ethereum</option>
                 <option value="56">Binance</option>
+                <option value="250">Fantom</option>
+                <option value="43114">Avalanche</option>
             </select>
 
             <select onChange={dexChangeHandler}>
               <option value="uniswap_v2">Uniswap</option>
               <option value="sushiswap">Sushiswap</option>
               <option value="pancakeswap_v2">Pancakeswap</option>
+              <option value="spookyswap">Spookyswap</option>
+              <option value="traderjoe">Trader Joe</option>
             </select>
 
             <button type="submit" className="bg-green-500 py-2 px-4 rounded text-white">Load</button>
@@ -47,7 +51,9 @@ const Organizations = (props) => {
             <tr>
               <th>Token</th>
               <th>Quote Rate</th>
-              <th>Liquidity</th>
+              <th>Total Liquidity</th>
+              <th>Swap Count</th>
+              <th>DEX Name</th>
             </tr>
           </thead>
           <tbody className="multi-channel-container divide-y divide-gray-200">
@@ -57,6 +63,7 @@ const Organizations = (props) => {
                   key={token.contract_address}
                   decimals={token.contract_decimals}
                   name={token.contract_name}
+                  dex_name={token.dex_name}
                   logo={token.logo_url}
                   quote_rate={token.quote_rate}
                   swap_count={token.swap_count_24h}

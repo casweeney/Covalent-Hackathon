@@ -10,6 +10,8 @@ const Token = (props) => {
         </td>
         <td>{props.quote_rate}</td>
         <td>{props.total_liquidity}</td>
+        <td>{props.swap_count}</td>
+        <td>{props.dex_name}</td>
       </tr>
     </Fragment>
   );
