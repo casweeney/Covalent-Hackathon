@@ -4,6 +4,7 @@ const Token = (props) => {
   return (
     <Fragment>
       <tr className="single-channel py-2">
+        <td>{props.id + 1}</td>
         <td>
           <img src={props.logo} className="w-8 h-8 rounded-full" alt="" />{" "}
           {props.name}

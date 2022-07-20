@@ -24,7 +24,7 @@ const Organizations = (props) => {
     <div className="flex m-7 space-x-6">
       <div className="bg-white w-full p-4">
         <div className=" flex justify-between font-bold text-lg pb-4">
-          <h3>Selected Tokens Traded on Uniswap</h3>
+          <h3>Swap Count and Liquidity of Tokens Traded on Selected Dexes</h3>
 
           <form onSubmit={dexFetchSubmitHandler}>
             <select onChange={networkChangeHandler}>
@@ -49,6 +49,7 @@ const Organizations = (props) => {
         <table className="table-auto w-full">
           <thead className="text-left bg-gray-100 text-gray-500 p-2 uppercase font-bold text-xs">
             <tr>
+              <th>SN</th>
               <th>Token</th>
               <th>Quote Rate</th>
               <th>Total Liquidity</th>
@@ -58,8 +59,9 @@ const Organizations = (props) => {
           </thead>
           <tbody className="multi-channel-container divide-y divide-gray-200">
             {props.tokens.length > 0 &&
-              props.tokens.map((token) => (
+              props.tokens.map((token, index) => (
                 <Token
+                  id={index}
                   key={token.contract_address}
                   decimals={token.contract_decimals}
                   name={token.contract_name}

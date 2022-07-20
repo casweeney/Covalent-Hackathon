@@ -29,6 +29,7 @@ const Assets = (props) => {
                     <table className="table-auto w-full">
                         <thead className="text-left bg-gray-100 text-gray-500 p-2 uppercase font-bold text-xs">
                             <tr>
+                                <th>SN</th>
                                 <th>Token</th>
                                 <th>Ticker</th>
                                 <th>Balance</th>
@@ -37,9 +38,10 @@ const Assets = (props) => {
                             </tr>
                         </thead>
                         <tbody className="multi-channel-container divide-y divide-gray-200">
-                            {props.allAssets.length > 0 && props.allAssets.map((asset) => {
+                            {props.allAssets.length > 0 && props.allAssets.map((asset, index) => {
                                 return (
                                     <tr key={asset.contract_address} className="single-channel py-2">
+                                        <td>{index + 1}</td>
                                         <td><img src={asset.logo_url} className="w-8 h-8 rounded-full" alt="" /> {asset.contract_name}</td>
                                         <td>{asset.contract_ticker_symbol}</td>
                                         <td>{ethers.utils.formatUnits(asset.balance, asset.contract_decimals)}</td>
@@ -59,6 +61,7 @@ const Assets = (props) => {
                     <table className="table-auto w-full">
                         <thead className="text-left bg-gray-100 text-gray-500 p-2 uppercase font-bold text-xs">
                             <tr>
+                                <th>SN</th>
                                 <th>From</th>
                                 <th>To</th>
                                 <th>Hash</th>
@@ -67,9 +70,10 @@ const Assets = (props) => {
                             </tr>
                         </thead>
                         <tbody className="multi-channel-container divide-y divide-gray-200">
-                            {props.allTransactions.length > 0 && props.allTransactions.map((transaction) => {
+                            {props.allTransactions.length > 0 && props.allTransactions.map((transaction, index) => {
                                 return (
                                     <tr key={transaction.block_height} className="single-channel py-2">
+                                        <td>{index + 1}</td>
                                         <td>{transaction.from_address}</td>
                                         <td>{transaction.to_address}</td>
                                         <td>{transaction.tx_hash}</td>
