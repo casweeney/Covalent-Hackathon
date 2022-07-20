@@ -31,10 +31,10 @@ const Defi = () => {
               <TopNav onLoading={setLoadingHandler} onFetchTransaction={fetchedTransactionHandler} onFetchedToken={fetchedTokenHandler} />
 
               <div className="bg-indigo-200 m-7 p-6">
-                  <div className="text-4xl text-gray-800 font-medium">
-                    Track DeFi and DAO Portfolios
-                  </div>
-                  <div className="mt-4">View all your DeFi investments and DAO analytics in a single dashboard!</div>
+                    <div className="text-4xl text-gray-800 font-medium">
+                        Track DeFi and DAO Portfolios
+                    </div>
+                    <div className="mt-4">View all your DeFi investments and DAO analytics in a single dashboard!</div>
               </div>
 
               <Assets loading={loading} allAssets={fetchedTokens} allTransactions={fetchedTransactions} />

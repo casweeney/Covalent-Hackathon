@@ -10,7 +10,14 @@ const Assets = (props) => {
     }
 
     if(props.allAssets.length === 0) {
-        return <p className="text-white text-center text-4xl mb-4">Search to track your assets accross multiple chains</p>
+        return (
+            <Fragment>
+                <p className="text-white text-center text-4xl mb-4">Search to track your assets accross multiple chains</p>
+                <div>
+                    <img className="w-full" src="images/new-Converted.gif" alt="" />
+                </div>
+            </Fragment>
+        )
     }
 
     return (

@@ -13,7 +13,6 @@ export function PieChart() {
   )
     .then((data) => data.json())
     .then((res) => {
-      console.log(res.data.items);
       const results = res.data.items.map((item) => {
         return { name: item.dex_name, swap: item.swap_fee };
       });

@@ -6,17 +6,39 @@ import { PieChart } from "../charts/Pie";
 
 const Dao = () => {
   const [uniswapToken, setUniswapTokens] = useState([]);
+  const [network, setNetwork] = useState(1);
+  const [dexName, setDexName] = useState("uniswap_v2");
+  const [loading, setLoading] = useState(false);
+
+  const setNetworkHandler = (networkId) => {
+    // console.log(networkId);
+    setNetwork(networkId);
+  }
+
+  const setDexNameHandler = (dex) => {
+    // console.log(dex);
+    setDexName(dex);
+  }
+
+  const loadDataHandler = () => {
+    getUniswapTokens();
+  }
 
   const getUniswapTokens = async () => {
+    setLoading(true);
+
     const response = await fetch(
-      "https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/?quote-currency=USD&format=JSON&page-number=1&page-size=20&key=ckey_c9ceec82b70743a0b334b50ec49"
+      `https://api.covalenthq.com/v1/${network}/xy=k/${dexName}/tokens/?quote-currency=USD&format=JSON&page-number=1&page-size=20&key=ckey_c9ceec82b70743a0b334b50ec49`
     );
     const data = await response.json();
     setUniswapTokens(data.data.items);
+
+    setLoading(false);
   };
 
   useEffect(() => {
     getUniswapTokens();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -51,7 +73,7 @@ const Dao = () => {
           </div>
         </div>
 
-        <Organizations tokens={uniswapToken} />
+        <Organizations loading={loading} onLoadData={loadDataHandler} onSetNetwork={setNetworkHandler} onSetDexName={setDexNameHandler} tokens={uniswapToken} />
       </div>
     </div>
   );

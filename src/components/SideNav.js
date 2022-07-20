@@ -1,22 +1,7 @@
-import { Fragment, useState, useRef } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const SideNav = () => {
-  const assetLink = useRef();
-  const daoLink = useRef();
-  const nftLink = useRef();
-  const [active, setActive] = useState(false);
-
-  const handleActiveLink = (type) => {
-    if (type == "assets") {
-      console.log((assetLink.current.style.color = "red"));
-    } else if (type == "dao") {
-      console.log((daoLink.current.style.color = "red"));
-    } else {
-      console.log((nftLink.current.style.color = "red"));
-    }
-  };
-
   return (
     <Fragment>
       {/* Side Navbar */}
@@ -38,12 +23,7 @@ const SideNav = () => {
             <img className="h-5 w-5" src="images/campaign.png" alt="" />
           </div>
           <div className="mx-3 text-sm text-gray-100">
-            <Link
-              to="/"
-              onClick={() => handleActiveLink("assets")}
-              className={active && "nav-active"}
-              ref={assetLink}
-            >
+            <Link to="/">
               Assets
             </Link>
           </div>
@@ -54,12 +34,7 @@ const SideNav = () => {
             <img className="h-5 w-5" src="images/dashboard.png" alt="" />
           </div>
           <div className="mx-3 text-sm text-gray-100">
-            <Link
-              to="/dao"
-              onClick={() => handleActiveLink("dao")}
-              className={active && "nav-active"}
-              ref={daoLink}
-            >
+            <Link to="/dao">
               DAO
             </Link>
           </div>

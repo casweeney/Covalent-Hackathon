@@ -2,11 +2,44 @@ import Token from "./Token";
 
 const Organizations = (props) => {
 
+  const networkChangeHandler = (e) => {
+    props.onSetNetwork(e.target.value);
+  }
+
+  const dexChangeHandler = (e) => {
+    props.onSetDexName(e.target.value);
+  }
+
+  const dexFetchSubmitHandler = (e) => {
+    e.preventDefault();
+
+    props.onLoadData();
+  }
+
+  if(props.loading) {
+    return <p className="text-center text-5xl text-white mb-4">Loading...</p>
+  }
+
   return (
     <div className="flex m-7 space-x-6">
       <div className="bg-white w-full p-4">
-        <div className="font-bold text-lg pb-4">
-          Selected Tokens Traded on Uniswap
+        <div className=" flex justify-between font-bold text-lg pb-4">
+          <h3>Selected Tokens Traded on Uniswap</h3>
+
+          <form onSubmit={dexFetchSubmitHandler}>
+            <select onChange={networkChangeHandler}>
+                <option value="1">Ethereum</option>
+                <option value="56">Binance</option>
+            </select>
+
+            <select onChange={dexChangeHandler}>
+              <option value="uniswap_v2">Uniswap</option>
+              <option value="sushiswap">Sushiswap</option>
+              <option value="pancakeswap_v2">Pancakeswap</option>
+            </select>
+
+            <button type="submit" className="bg-green-500 py-2 px-4 rounded text-white">Load</button>
+          </form>
         </div>
 
         <table className="table-auto w-full">
