@@ -29,9 +29,21 @@ The "Assets" section of the dashboard will load right away after selecting the a
 1. Ethereum
 2. Binance Smart Chain
 3. Polygon
+4. Fantom
+5. Avalanche
 
 
 # Development Environment
+This project is built with:
+1. HTML and CSS
+2. Tailwind CSS
+3. JavaScript
+4. React JS
+
+# Dependencies
+1. react-router-dom (used for single page routing)
+2. ether.js (used to return token balance by dividing the balance by the decimal)
+3. react-chartjs-2 (used for presenting data in charts)
 
 ## User Interface Link
 Vercel link []
@@ -43,6 +55,7 @@ Vercel link []
 4. Run `npm start` to ensure everything is working well
 5. Deploy on (Netlify or Vercel or Fleek)
 ### Deployments
+Project is deployed on Vercel
 
 ### Contributors
 Casweeney Ojukwu: https://github.com/casweeney <br>

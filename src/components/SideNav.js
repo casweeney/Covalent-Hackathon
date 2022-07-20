@@ -40,20 +40,16 @@ const SideNav = () => {
           </div>
         </div>
 
-        {/* <div className="flex m-5 mt-2 items-center">
+        <div className="flex m-5 mt-2 items-center">
           <div>
             <img className="h-5 w-5" src="images/orders.png" alt="" />
           </div>
           <div className="mx-3 text-sm text-gray-100">
-            <Link
-              to="/nft"
-              onClick={() => handleActiveLink("nft")}
-              ref={nftLink}
-            >
+            <Link to="/nft">
               NFT
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
       {/* Side Navbar */}
     </Fragment>

@@ -1,5 +1,6 @@
 import Dao from './components/pages/Dao';
 import Defi from './components/pages/Defi';
+import NotFound from './components/pages/NotFound';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,10 @@ function App() {
 
             <Route path='/dao' exact>
                 <Dao />
+            </Route>
+
+            <Route path="*">
+              <NotFound />
             </Route>
         </Switch>
     </div>
