@@ -45,6 +45,35 @@ This project is built with:
 2. ether.js (used to return token balance by dividing the balance by the decimal)
 3. react-chartjs-2 (used for presenting data in charts)
 
+# API
+This project was built using the Covalent API
+
+## Endpoints used:
+### Class A Endpoints:
+
+1. Get token balances for address
+Given 
+chain_id
+ and wallet address
+, return current token balances along with their spot prices. This endpoint supports a variety of token standards like ERC20, ERC721 and ERC1155. As a special case, network native tokens like ETH on Ethereum are also returned even though it's not a token contract.
+
+2. Get transactions for address: Given 
+chain_id
+ and wallet 
+address
+, return all transactions along with their decoded log events. This endpoint does a deep-crawl of the blockchain to retrieve all kinds of transactions that references the 
+address
+ including indexed topics within the event logs.
+
+### Class B Endpoint:
+
+1. Get XY=K network exchange tokens:
+Given the chain_id and dexname, we returned network exchange tokens for a specific DEX.
+
+2. Get XY=K supported DEXes.
+Returns a list of DEXes currently supported by the XY=K endpoints (chain):
+Here we selected Ethereum mainnet as our default chain. We returned top "" DEXes on Ethereum and their swap fees
+
 ## User Interface Link
 Vercel link []
 
