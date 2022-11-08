@@ -28,7 +28,7 @@ const TopNav = (props) => {
     const fetchAssestsHandler = async () => {
         props.onLoading(true);
 
-        const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?&key=ckey_c9ceec82b70743a0b334b50ec49`);
+        const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?&key=${process.env.REACT_APP_COVALENT_KEY}`);
         const data = await response.json();
 
         props.onLoading(false);
@@ -37,7 +37,7 @@ const TopNav = (props) => {
     }
 
     const fetchTransactionHandler = async () => {
-        const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/transactions_v2/?&key=ckey_c9ceec82b70743a0b334b50ec49`);
+        const response = await fetch(`https://api.covalenthq.com/v1/${chainId}/address/${address}/transactions_v2/?&key=${process.env.REACT_APP_COVALENT_KEY}`);
         const data = await response.json();
 
         props.onFetchTransaction(data.data.items);

@@ -9,7 +9,7 @@ export function PieChart() {
 
   // second dashboard
   fetch(
-    "https://api.covalenthq.com/v1/xy=k/supported_dexes/?quote-currency=USD&format=JSON&key=ckey_ccc9ab3b73314fdb8ef18f53861"
+    `https://api.covalenthq.com/v1/xy=k/supported_dexes/?quote-currency=USD&format=JSON&key=${process.env.REACT_APP_COVALENT_KEY}`
   )
     .then((data) => data.json())
     .then((res) => {

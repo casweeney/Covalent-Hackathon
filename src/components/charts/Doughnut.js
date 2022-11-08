@@ -8,7 +8,7 @@ export function DoughnutChart() {
   const [info, setInfo] = useState([]);
 
   fetch(
-    "https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/?quote-currency=USD&format=JSON&page-size=10&page-number=&key=ckey_c9ceec82b70743a0b334b50ec49"
+    `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/?quote-currency=USD&format=JSON&page-size=10&page-number=&key=${process.env.REACT_APP_COVALENT_KEY}`
   )
     .then((data) => data.json())
     .then((res) => {

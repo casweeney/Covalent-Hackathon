@@ -28,7 +28,7 @@ const Dao = () => {
     setLoading(true);
 
     const response = await fetch(
-      `https://api.covalenthq.com/v1/${network}/xy=k/${dexName}/tokens/?quote-currency=USD&format=JSON&page-number=1&page-size=20&key=ckey_c9ceec82b70743a0b334b50ec49`
+      `https://api.covalenthq.com/v1/${network}/xy=k/${dexName}/tokens/?quote-currency=USD&format=JSON&page-number=1&page-size=20&key=ckey_c13d0d85e5f640df9de227e9de8`
     );
     const data = await response.json();
     setUniswapTokens(data.data.items);
